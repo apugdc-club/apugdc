@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merch - APU Game Development Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .merch-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            width: 100%;
+            height: 100vh;
+            padding: 100px 2rem 2rem 2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+
+        .merch-title {
+            font-size: 3vw;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .merch-card {
+            background: rgba(20, 20, 25, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            max-width: 450px;
+            width: 90vw;
+        }
+
+        .merch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), inset 0 0 10px rgba(255, 0, 234, 0.2);
+            border-color: rgba(0, 255, 255, 0.4);
+        }
+
+        .merch-image {
+            width: auto;
+            max-width: 100%;
+            max-height: 50vh;
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto 1.5rem auto;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .merch-card:hover .merch-image {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .merch-name {
+            color: #ff00ea;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-shadow: 0 0 10px rgba(255, 0, 234, 0.4);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .merch-desc {
+            color: #a0aec0;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        a.merch-link {
+            text-decoration: none;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .merch-container {
+                justify-content: flex-start;
+                padding-top: 120px;
+            }
+
+            .merch-title {
+                font-size: 8vw;
+                margin-bottom: 1.5rem;
+            }
+            
+            .merch-card {
+                padding: 1.5rem;
+                max-width: 85vw;
+            }
+            
+            .merch-image {
+                max-height: 45vh;
+                width: auto;
+                max-width: 100%;
+                margin: 0 auto 1rem auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="pill-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="merch.html" class="active">Merch</a></li>
+            <li><a href="showcase.html">Games Showcase</a></li>
+            <li><a href="ggw.html">GGW</a></li>
+            <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+        </ul>
+    </nav>
+
+    <div class="merch-container parallax-group">
+        <h1 class="merch-title">Official Merch</h1>
+
+        <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf-ag0C-TeMErhKrFnJ3ZTA8p5EDkw0DsufSyWvM1n-hsdg6g/viewform?usp=send_form&pli=1&authuser=0" target="_blank" rel="noopener noreferrer" class="merch-link">
+            <div class="merch-card">
+                <img src="images/Varsity%20Jacket.png" alt="Varsity Jacket" class="merch-image">
+                <div class="merch-name">Varsity Jacket</div>
+                <div class="merch-desc">Click here to order your APUGDC Varsity Jacket!</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Need to include script.js at the end to make stars and parallax work -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
